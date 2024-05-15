@@ -1,5 +1,4 @@
 import streamlit as st
-from reaction_test import reaction_test
 
 
 def questions():

@@ -43,7 +43,7 @@ def show_images():
     st.title("Reaction Time Test")
     
     # Load images and correct answers from CSV
-    df = pd.read_csv("D:/Files/2ndSemAY2023-2024/148 App/images.csv")
+    df = pd.read_csv("Fishikawa/images.csv")
     images_set1 = df[:len(df)//2].values.tolist()  
     images_set2 = df[len(df)//2:].values.tolist()  
     

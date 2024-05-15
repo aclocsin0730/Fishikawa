@@ -12,7 +12,7 @@ selected = option_menu(
         orientation="horizontal",
         styles={
         "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "white", "font-size": "20px"}, 
+        "icon": {"color": "gray", "font-size": "20px"}, 
         "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
         "nav-link-selected": {"background-color": "blue"},
     }

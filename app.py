@@ -5,12 +5,9 @@ import pandas as pd
 import random
 import time
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
-st.set_page_config(layout="wide")
-
 # Google Sheets authentication
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name(st.secrets['secrets']["gcp_service_account"], scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("Fishikawa\paper-423314-05d2c7e30259.json", scope)
 client = gspread.authorize(creds)
 sheet = client.open("fishikawa_data").sheet1
 

@@ -1,12 +1,12 @@
-st.set_option('deprecation.showfileUploaderEncoding', False)
-st.set_page_config(layout="wide")
-
 import streamlit as st
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 import random
 import time
+
+st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_page_config(layout="wide")
 
 # Google Sheets authentication
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]

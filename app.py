@@ -6,8 +6,9 @@ import random
 import time
 
 # Google Sheets authentication
+creds_json = st.secrets['secrets']["gcp_service_account"]
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("paper-423314-05d2c7e30259.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name(creds_json, scope)
 client = gspread.authorize(creds)
 sheet = client.open("fishikawa_data").sheet1
 
@@ -43,7 +44,7 @@ def show_images():
     st.title("Reaction Time Test")
     
     # Load images and correct answers from CSV
-    df = pd.read_csv("Fishikawa/images.csv")
+    df = pd.read_csv("Fishikawa\images.csv")
     images_set1 = df[:len(df)//2].values.tolist()  
     images_set2 = df[len(df)//2:].values.tolist()  
     

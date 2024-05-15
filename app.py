@@ -7,9 +7,8 @@ import time
 import json
 
 # Google Sheets authentication
-creds_json = st.secrets['secrets']["gcp_service_account"]
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name(creds_json, scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name(st.secrets['secrets']["gcp_service_account"])
 client = gspread.authorize(creds)
 sheet = client.open("fishikawa_data").sheet1
 

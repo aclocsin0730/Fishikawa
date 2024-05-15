@@ -1,3 +1,6 @@
+st.set_option('deprecation.showfileUploaderEncoding', False)
+st.set_page_config(layout="wide")
+
 import streamlit as st
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials

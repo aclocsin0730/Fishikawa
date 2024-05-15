@@ -48,7 +48,6 @@ def show_images():
         
         # Generate wrong options
         wrong_options = [option for _, option in all_images if option != correct_answer]
-        random.shuffle(wrong_options)
 
         # Include correct answer in options
         options = random.sample(wrong_options, 3) + [correct_answer]
